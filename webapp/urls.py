@@ -27,9 +27,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     # path('site-admin/', include('djadmin.urls')),
+    path('', include('apps.home.urls')),
     path('admin/', admin.site.urls),
     re_path(r'^cms/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'^pages/', include(wagtail_urls)),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

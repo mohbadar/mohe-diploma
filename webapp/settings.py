@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -52,7 +51,18 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'apps.config',
-    'django_mptt_admin'
+    'apps.post',
+    'apps.page',
+    'apps.product',
+    'apps.service',
+    'apps.home',
+    # 'django_mptt_admin',
+    'admin_interface',
+    'colorfield',
+    # 'apps.config.apps.SuitConfig',
+    'django.contrib.admin',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -148,3 +158,22 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 WAGTAIL_SITE_NAME = 'DIF Website'
+
+
+
+####################################
+    ##  CKEDITOR CONFIGURATION ##
+####################################
+ 
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+ 
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
+ 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    },
+}
+###################################
