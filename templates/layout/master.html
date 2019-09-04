@@ -15,15 +15,12 @@
 
             {% include 'layout/partials/header.html'%}
 
-
-            {% include 'layout/partials/our_feature.html'%}
-
-            {% include 'layout/partials/services.html'%}
-
-
-            {% include 'layout/partials/recent_projects.html'%}
-
-            {% include 'layout/partials/recent_blogs.html'%}
+            {% block carousel %}{% endblock %}
+            {% block our_feature %}{% endblock %}
+            {% block services %}{% endblock %}
+            {% block recent_projects %}{% endblock %}
+            {% block recent_blogs %}{% endblock %}
+            {% block content %}{% endblock %}
 
             {% include 'layout/partials/footer.html'%}
 

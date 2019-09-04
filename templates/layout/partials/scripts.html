@@ -33,3 +33,26 @@
 	});
 </script>
     
+
+<script type="text/javascript">
+  
+   $(document).ready(function(){
+
+     $.ajax({
+            url:  '{% url 'get_post_categories' %}',
+            type:  'get',
+            dataType:  'json',
+            success: function  (data){
+                   $('.categories_div').empty();
+                   var rows =  '';
+                   data.post_categories.forEach(item => {
+                        rows += `
+                        <li><a href="/posts/categories/${item.name}">${item.name}</a></li>
+                        `
+                })
+               $('.categories_div').append(rows);
+           }
+       });
+
+   });
+</script>
