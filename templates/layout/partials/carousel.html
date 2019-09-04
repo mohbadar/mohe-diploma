@@ -1,0 +1,33 @@
+
+         {% load static from staticfiles %}
+
+    <!-- Carousel -->
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url({% static 'images/bg_2.jpg'%});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate">
+          	<span class="subheading">Welcome to DFI World</span>
+            <h1 class="mb-4">We Are Building Best Data and FinTech Platform</h1>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url({% static 'images/bg_1.jpg'%});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate">
+          	<span class="subheading">Todays Talent, Tommorow Success</span>
+            <h1 class="mb-4">We Help to Make Money</h1>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Carousel -->

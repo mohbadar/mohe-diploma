@@ -1,25 +1,103 @@
-{% load static from staticfiles %}
-    
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo.jpg'%}" style="width:80px;"/></a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+         {% load static from staticfiles %}
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="speakers.html" class="nav-link">Products</a></li>
-	          <li class="nav-item"><a href="schedule.html" class="nav-link">Services</a></li>
-	           <li class="nav-item"><a href="schedule.html" class="nav-link">Other</a></li>
-              <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta mr-md-2"><a href="#" class="nav-link">Buy ticket</a></li>
+<div class="bg-top navbar-light">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
+    			<div class="col-md-4 d-flex align-items-center py-4">
+    				<a class="navbar-brand" href="index.html">
+					<img src="{% static 'images/logo.jpg'%}" style="width:80px" />
+					</a>
+    			</div>
+	    		<div class="col-lg-8 d-block">
+		    		<div class="row d-flex">
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+					    	<div class="text">
+					    		<span>Email</span>
+						    	<span>info@dfi.af</span>
+						    </div>
+					    </div>
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <div class="text">
+						    	<span>Call</span>
+						    	<span>Call Us: + 93 794 0355 44</span>
+						    </div>
+					    </div>
+					    <div class="col-md topper d-flex align-items-center justify-content-end">
+					    	<p class="mb-0 d-block">
+					    		<a href="#" class="btn py-2 px-3 btn-primary">
+					    			<span>Login to System</span>
+					    		</a>
+					    	</p>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
 
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+
+
+<!-- Navbar -->
+    <nav id="main-nav">
+      <!-- Sample menu definition -->
+      <ul id="main-menu" class="sm sm-blue">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a>
+          <ul>
+            <li><a href="">Introduction to SmartMenus jQuery</a></li>
+            <li><a href="">Demos + themes</a></li>
+            <li><a href="">The author</a></li>
+            <li><a href="">The company</a>
+              <ul>
+                <li><a href="">About Vadikom</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Privacy policy</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="">Download</a></li>
+        <li><a href="">Support</a>
+          <ul>
+            <li><a href="">Premium support</a></li>
+            <li><a href="">Forums</a></li>
+          </ul>
+        </li>
+        <li><a href="">Docs</a></li>
+        <li><a href="#">Sub test</a>
+          <ul>
+            <li><a href="#" class="disabled">Disabled menu item</a></li>
+            <li><a href="#">Dummy item</a></li>
+            <li><a href="#">more...</a>
+              <ul>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">more...</a>
+                  <ul>
+                    <li><a href="#">Dummy item</a></li>
+                    <li><a href="#" class="current">A 'current' class item</a></li>
+                    <li><a href="#">Dummy item</a></li>
+                    <li><a href="#">more...</a>
+                      <ul>
+                        <li><a href="#">subMenusMinWidth</a></li>
+                        <li><a href="#">10em</a></li>
+                        <li><a href="#">forced.</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Dummy item</a></li>
+                    <li><a href="#">Dummy item</a></li>
+                  </ul>
+                </li>
+      
+                <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+     
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+<!-- End Navbar -->

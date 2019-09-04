@@ -1,4 +1,8 @@
       {% load static from staticfiles %}
+
+
+
+
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
@@ -14,3 +18,18 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="{% static 'js/google-map.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
+
+
+ <!-- SmartMenus jQuery plugin -->
+<script type="text/javascript" src="{% static 'sm/jquery.smartmenus.js' %}"></script>
+
+<!-- SmartMenus jQuery init -->
+<script type="text/javascript">
+	$(function() {
+		$('#main-menu').smartmenus({
+			subMenusSubOffsetX: 1,
+			subMenusSubOffsetY: -8
+		});
+	});
+</script>
+    

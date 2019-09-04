@@ -28,6 +28,10 @@ from django.conf.urls.static import static
 urlpatterns = [
     # path('site-admin/', include('djadmin.urls')),
     path('', include('apps.home.urls')),
+    path('products/', include('apps.product.urls')),
+    path('services/', include('apps.service.urls')),
+    path('posts/', include('apps.post.urls')),
+    path('contents/', include('apps.page.urls')),
     path('admin/', admin.site.urls),
     re_path(r'^cms/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),

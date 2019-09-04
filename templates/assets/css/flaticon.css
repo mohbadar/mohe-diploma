@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 04/01/2019 13:45
+  	Creation date: 06/10/2018 08:32
   	*/
 
 
@@ -36,11 +36,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-placeholder:before { content: "\f100"; }
-.flaticon-world:before { content: "\f101"; }
-.flaticon-hotel:before { content: "\f102"; }
-.flaticon-cooking:before { content: "\f103"; }
-.flaticon-guest:before { content: "\f104"; }
-.flaticon-idea:before { content: "\f105"; }
-.flaticon-handshake:before { content: "\f106"; }
-.flaticon-chair:before { content: "\f107"; }
+.flaticon-collaboration:before { content: "\f100"; }
+.flaticon-search-engine:before { content: "\f101"; }
+.flaticon-analysis:before { content: "\f102"; }
+.flaticon-handshake:before { content: "\f103"; }
+.flaticon-business:before { content: "\f104"; }
+.flaticon-insurance:before { content: "\f105"; }
+.flaticon-money:before { content: "\f106"; }
+.flaticon-rating:before { content: "\f107"; }
