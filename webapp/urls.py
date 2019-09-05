@@ -27,6 +27,7 @@ urlpatterns = [
     path('products/', include('apps.product.urls')),
     path('services/', include('apps.service.urls')),
     path('posts/', include('apps.post.urls')),
+    path('projects/', include('apps.project.urls')),
     path('contents/', include('apps.page.urls')),
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),

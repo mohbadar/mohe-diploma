@@ -8,7 +8,7 @@ from django.utils.text import slugify
 
 # category model class
 class ServiceCateory(models.Model):
-	name = models.CharField(max_length=128, verbose_name=('Category Name'))
+	name = models.CharField(max_length=128, verbose_name=('Category Name'), unique=True)
 	created_at = models.DateTimeField(default=timezone.now, editable=False)
 
 
@@ -21,9 +21,9 @@ class ServiceCateory(models.Model):
 class Service(models.Model):
 	category = models.ForeignKey(ServiceCateory, related_name='service_category' , on_delete='cascade')
 	created_at = models.DateTimeField(default=timezone.now, editable=False)
-	title = models.CharField(max_length=512)
+	title = models.CharField(max_length=512, unique=True)
 	abstract = models.TextField()
-	slug = models.SlugField(max_length = 250, null = False, blank = False, editable=False)
+	slug = models.SlugField(max_length = 250, null = False, blank = False, editable=False, unique=True)
 	content = RichTextUploadingField()
 
 	def save(self, *args, **kwargs):	   
@@ -31,7 +31,7 @@ class Service(models.Model):
 	   super(Service, self).save(*args, **kwargs) # Call the real save() method
 	
 	def __str__(self):
-		return '{}: {}: {}'.format(self.created_at.strftime('%Y-%m-%d'), self.title)
+		return '{}: {}'.format(self.created_at.strftime('%Y-%m-%d'), self.title)
 
 	class Meta:
 		ordering = ['-created_at']

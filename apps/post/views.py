@@ -17,7 +17,6 @@ def get_post_categories(request):
 
     post_categories = list(PostCateory.objects.all().values())
     data = dict()
-
     data['post_categories'] = post_categories
 
     return JsonResponse(data)

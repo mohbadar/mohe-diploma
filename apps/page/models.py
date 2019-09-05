@@ -8,7 +8,7 @@ from django.utils.text import slugify
 
 # category model class
 class PageCategory(models.Model):
-	name = models.CharField(max_length=128, verbose_name=('Category Name'))
+	name = models.CharField(max_length=128, verbose_name=('Category Name'), unique=True)
 	created_at = models.DateTimeField(default=timezone.now, editable=False)
 
 
@@ -19,10 +19,10 @@ class PageCategory(models.Model):
 		ordering = ['-created_at']
 
 class Page(models.Model):
-    title = models.CharField(max_length=256, verbose_name=("Page Title"))
+    title = models.CharField(max_length=256, verbose_name=("Page Title"),unique=True)
     category = models.ForeignKey(PageCategory, related_name="page_category", on_delete="cascade")
     abstract = models.TextField()
-    slug = models.SlugField(max_length = 250, null = False, blank = False, editable=False)
+    slug = models.SlugField(max_length = 250, null = False, blank = False, editable=False,unique=True)
     content  = RichTextUploadingField()
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     

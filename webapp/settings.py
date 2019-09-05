@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.product',
     'apps.service',
     'apps.home',
+    'apps.project',
     # 'django-admin-theme',
     'grappelli',
     'django.contrib.admin',
