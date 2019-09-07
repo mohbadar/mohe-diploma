@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
+    'ckeditor_uploader',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -46,8 +48,7 @@ INSTALLED_APPS = [
     # 'django-admin-theme',
     # 'grappelli',
     'django.contrib.admin',
-    'ckeditor',
-    'ckeditor_uploader',
+
 ]
 
 MIDDLEWARE = [
@@ -141,17 +142,22 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'templates/assets'),
+]
 
 ####################################
     ##  CKEDITOR CONFIGURATION ##
 ####################################
  
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
- 
+
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"
-CKEDITOR_ALLOW_NONIMAGE_FILES = False
- 
+CKEDITOR_ALLOW_NONIMAGE_FILES = True
+CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
+CKEDITOR_RESTRICT_BY_USER = True
+
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': None,

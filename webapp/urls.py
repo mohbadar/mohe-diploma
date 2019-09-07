@@ -13,11 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
 """
 from django.urls import path, re_path, include
+from django.conf.urls import url, include
+
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # from apps.config import 
 
-
+from django.views.static import serve
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -30,8 +33,18 @@ urlpatterns = [
     path('projects/', include('apps.project.urls')),
     path('contents/', include('apps.page.urls')),
     path('admin/', admin.site.urls),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     path('grappelli/', include('grappelli.urls')), # grappelli URLS
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += staticfiles_urlpatterns()
+
+# serving media files only on debug mode
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', serve, {
+            'document_root': settings.MEDIA_ROOT
+        }),
+    ]
