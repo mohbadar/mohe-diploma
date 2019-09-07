@@ -34,3 +34,19 @@ def get_pages_of_category(request, name):
 		pages = paginator.page(paginator.num_pages)
 
 	return render(request, "page/pages.html", {'pages':pages})
+
+
+def get_all_pages(request):
+	pages = Page.objects.all()
+	page = request.GET.get('page',6)
+
+	paginator = Paginator(pages,6)
+
+	try:
+		pages = paginator.page(page)
+	except PageNotAnInteger:
+		pages = paginator.page(1)
+	except EmptyPage:
+		pages = paginator.page(paginator.num_pages)
+
+	return render(request, "page/pages.html", {'pages':pages})

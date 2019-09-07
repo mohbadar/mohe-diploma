@@ -35,3 +35,19 @@ def get_services_of_category(request, name):
 		services = paginator.page(paginator.num_pages)
 
 	return render(request, "service/services.html", {'services':services})
+
+
+def get_all_services(request):
+	services = Service.objects.all()
+	page = request.GET.get('page',6)
+
+	paginator = Paginator(services,6)
+
+	try:
+		services = paginator.page(page)
+	except PageNotAnInteger:
+		services = paginator.page(1)
+	except EmptyPage:
+		services = paginator.page(paginator.num_pages)
+
+	return render(request, "service/services.html", {'services':services})

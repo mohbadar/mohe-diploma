@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'apps.home',
     'apps.project',
     # 'django-admin-theme',
-    'grappelli',
+    # 'grappelli',
     'django.contrib.admin',
     'ckeditor',
     'ckeditor_uploader',

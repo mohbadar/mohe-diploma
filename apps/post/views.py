@@ -35,3 +35,19 @@ def get_posts_of_category(request, name):
 		posts = paginator.page(paginator.num_pages)
 
 	return render(request, "post/posts.html", {'posts':posts})
+
+
+def get_all_posts(request):
+	posts = Post.objects.all()
+	page = request.GET.get('page',6)
+
+	paginator = Paginator(posts,6)
+
+	try:
+		posts = paginator.page(page)
+	except PageNotAnInteger:
+		posts = paginator.page(1)
+	except EmptyPage:
+		posts = paginator.page(paginator.num_pages)
+
+	return render(request, "post/posts.html", {'posts':posts})
