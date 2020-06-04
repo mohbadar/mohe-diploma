@@ -2,4 +2,4 @@ django
 django-ckeditor
 pillow
 django-grappelli
-
+django-languages-plus

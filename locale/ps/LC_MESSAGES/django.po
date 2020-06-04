@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 12:23+0430\n"
+"POT-Creation-Date: 2020-06-04 13:22+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,22 +17,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/home/index.html:6
-
+#: templates/layout/partials/navbar.html:9
 msgid "ministry_name"
-msgstr "د تحصیلات عالی وزارت"
+msgstr ""
 
+#: templates/layout/partials/navbar.html:9
 msgid "navbar_menu"
-msgstr "مینو"
+msgstr ""
 
+#: templates/layout/partials/navbar.html:12
 msgid "navbar_newform"
-msgstr "نوی فورم"
+msgstr ""
 
+#: templates/layout/partials/navbar.html:13
 msgid "navbar_followform"
-msgstr "د فورم تعقیب"
+msgstr ""
 
+#: templates/layout/partials/navbar.html:14
 msgid "navbar_contactus"
-msgstr "اریکه" 
+msgstr ""
 
-msgid "navbar_about"
-msgstr "زمونز په اره"
+#: webapp/settings.py:116
+msgid "Farsi"
+msgstr ""
+
+#: webapp/settings.py:117
+msgid "Pushto"
+msgstr ""
+
+#: webapp/settings.py:118
+msgid "English"
+msgstr ""

@@ -23,6 +23,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.i18n import set_language
 
 urlpatterns = [
     # path('site-admin/', include('djadmin.urls')),
@@ -33,7 +34,7 @@ urlpatterns = [
     # path('projects/', include('apps.project.urls')),
     # path('contents/', include('apps.page.urls')),
     path('admin/',  admin.site.urls),
-    url(r'^i18n/', include('django.conf.urls.i18n')),
+    path('i18n/', include('django.conf.urls.i18n')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

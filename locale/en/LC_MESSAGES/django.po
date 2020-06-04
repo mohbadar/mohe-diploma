@@ -19,20 +19,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/home/index.html:6
+#msgid "ministry_name"
+#msgstr "Ministry of Higher Education"
+
+#msgid "navbar_menu"
+#msgstr "Menu"
+
+#msgid "navbar_newform"
+#msgstr "New Form"
+
+#msgid "navbar_followform"
+#msgstr "Follow Form"
+
+#msgid "navbar_contactus"
+#msgstr "Contact Us" 
+
+#msgid "navbar_about"
+#msgstr "About Us"
+
+
 msgid "ministry_name"
-msgstr "Ministry of Higher Education"
+msgstr "وزارت تحصیلات عالی"
 
 msgid "navbar_menu"
-msgstr "Menu"
+msgstr "گزینه ها"
 
 msgid "navbar_newform"
-msgstr "New Form"
+msgstr "فورم جدید"
 
 msgid "navbar_followform"
-msgstr "Follow Form"
+msgstr "تعقیب فورم"
 
 msgid "navbar_contactus"
-msgstr "Contact Us" 
+msgstr "تماس با ما" 
 
 msgid "navbar_about"
-msgstr "About Us"
+msgstr "درباره با ما"
