@@ -3,24 +3,19 @@
 
     <head>
 
-    <title>Ministry of Higher Education</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-
      {% include 'layout/partials/head.html'%}
     </head>
 
-    <body>
+    <body id="page-top" dir="rtl">
 
+            {% include 'layout/partials/navbar.html'%}
             {% include 'layout/partials/header.html'%}
 
-            {% block carousel %}{% endblock %}
-            {% block our_feature %}{% endblock %}
-            {% block services %}{% endblock %}
-            {% block recent_projects %}{% endblock %}
-            {% block recent_blogs %}{% endblock %}
-            
+            {% include 'layout/partials/portfolio.html'%}
+            {% include 'layout/partials/about.html'%}
+
+            {% include 'layout/partials/contact.html'%}
+
             {% block content %}{% endblock %}
 
             {% include 'layout/partials/footer.html'%}
