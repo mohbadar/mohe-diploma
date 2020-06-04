@@ -27,15 +27,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     # path('site-admin/', include('djadmin.urls')),
     path('', include('apps.home.urls')),
-    path('products/', include('apps.product.urls')),
-    path('services/', include('apps.service.urls')),
-    path('posts/', include('apps.post.urls')),
-    path('projects/', include('apps.project.urls')),
-    path('contents/', include('apps.page.urls')),
-    path('admin/', # admin.site.urls),
-    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-    path('grappelli/', include('grappelli.urls')), # grappelli URLS
-
+    # path('products/', include('apps.product.urls')),
+    # path('services/', include('apps.service.urls')),
+    # path('posts/', include('apps.post.urls')),
+    # path('projects/', include('apps.project.urls')),
+    # path('contents/', include('apps.page.urls')),
+    path('admin/',  admin.site.urls),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

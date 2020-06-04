@@ -38,92 +38,26 @@
   
    $(document).ready(function(){
 
-     $.ajax({
-            url:  '{% url 'get_post_categories' %}',
-            type:  'get',
-            dataType:  'json',
-            success: function  (data){
 
-                console.log("data: ", data)
-                   $('.post_categories_div').empty();
-                   var rows =  '';
-                   data.post_categories.forEach(item => {
-                        rows += `
-                        <li><a href="/posts/categories/${item.name}">${item.name}</a></li>
-                        `
-                })
-               $('.post_categories_div').append(rows);
-           }
-       });
-
-         $.ajax({
-            url:  '{% url 'get_page_categories' %}',
-            type:  'get',
-            dataType:  'json',
-            success: function  (data){
-                   $('.page_categories_div').empty();
-                   var rows =  '';
-                   data.page_categories.forEach(item => {
-                        rows += `
-                          <li><a href="/contents/categories/${item.name}" class="page-category">${item.name}</a></li>
-                         `
-                })
-               $('.page_categories_div').append(rows);
-           }
-       });
+      //     $.ajax({
+      //       url:  '{% url '',
+      //       type:  'get',
+      //       dataType:  'json',
+      //       success: function  (data){
+      //              $('.product_categories_div').empty();
+      //              var rows =  '';
+      //              data.product_categories.forEach(item => {
+      //                   rows += `
+      //                     <li><a href="/products/categories/${item.name}" class="product-category">${item.name}</a></li>
+      //                    `
+      //           })
+      //          $('.product_categories_div').append(rows);
+      //      }
+      //  });
 
 
+    
 
-          $.ajax({
-            url:  '{% url 'get_product_categories' %}',
-            type:  'get',
-            dataType:  'json',
-            success: function  (data){
-                   $('.product_categories_div').empty();
-                   var rows =  '';
-                   data.product_categories.forEach(item => {
-                        rows += `
-                          <li><a href="/products/categories/${item.name}" class="product-category">${item.name}</a></li>
-                         `
-                })
-               $('.product_categories_div').append(rows);
-           }
-       });
-
-
-                   $.ajax({
-            url:  '{% url 'get_service_categories' %}',
-            type:  'get',
-            dataType:  'json',
-            success: function  (data){
-                   $('.service_categories_div').empty();
-                   var rows =  '';
-                   data.service_categories.forEach(item => {
-                        rows += `
-                          <li><a href="/services/categories/${item.name}" class="page-category">${item.name}</a></li>
-                         `
-                })
-               $('.service_categories_div').append(rows);
-           }
-       });
-
-
-        $.ajax({
-            url:  '{% url 'get_project_categories' %}',
-            type:  'get',
-            dataType:  'json',
-            success: function  (data){
-                   $('.project_categories_div').empty();
-                   var rows =  '';
-                   data.project_categories.forEach(item => {
-                        rows += `
-                          <li><a href="/projects/categories/${item.name}" class="page-category">${item.name}</a></li>
-                         `
-                })
-               $('.project_categories_div').append(rows);
-           }
-       });
-       
 
    });
 </script>

@@ -29,27 +29,7 @@
 				<div class="row">
         
 
-          
-            {% for post in posts%}
-              <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-             
-                    <div class="meta-date text-center p-2">
-                        <span class="day">{{ post.created_at|date:"d" }}</span>
-                        <span class="mos">{{ post.created_at|date:"M" }}</span>
-                        <span class="yr">{{ post.created_at|date:"Y" }}</span>
-                    </div>
-                    </a>
-                    <div class="text bg-white p-4">
-                        <h3 class="heading"><a href="#">{{post.title|slice:'80'}}</a></h3>
-                        <p>{{post.abstract|slice:'200'}}</p>
-                        <div class="d-flex align-items-center mt-4">
-                            <p class="mb-0"><a href="/posts/{{post.slug}}" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            {% endfor%}
+        
 
                </div>
           </div>
