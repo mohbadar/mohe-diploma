@@ -32,7 +32,7 @@ urlpatterns = [
     path('posts/', include('apps.post.urls')),
     path('projects/', include('apps.project.urls')),
     path('contents/', include('apps.page.urls')),
-    path('admin/', admin.site.urls),
+    path('admin/', # admin.site.urls),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     path('grappelli/', include('grappelli.urls')), # grappelli URLS
 

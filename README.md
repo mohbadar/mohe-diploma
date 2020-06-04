@@ -1,9 +1,8 @@
-
-DFI Official Website
+#### MOHE Online Application
 
 Installation Guide:
 
-git clone https://github.com/mohbadar/dfi-website.git
+git clone https://github.com/mohbadar/mohe-application.git
 
 cd dfi-website
 
