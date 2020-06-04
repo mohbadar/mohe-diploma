@@ -1,5 +1,17 @@
 {% extends 'layout/master.html'%}
 
-{% block content %}{% endblock %}
+{% block content %}
+
+
+{% load i18n %}
+{% get_available_languages as languages %}
+
+{% ifequal LANGUAGE_CODE "en" %}
+       <a href="i18n/es{{ request.get_full_path }}">Spanish</a>
+{% else %}
+       <a href="i18n/en{{ request.get_full_path }}">English</a>
+{% endifequal %}
+
+{% endblock %}
 
             
