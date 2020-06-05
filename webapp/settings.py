@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'apps.home',
-    'apps.organization'
+    'apps.organization',
+    'apps.form'
 
 ]
 
