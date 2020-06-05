@@ -6,7 +6,7 @@ class Tenant(models.Model):
     name = models.CharField(name="name", max_length=255, unique=True, db_index=True,help_text="Tenant Name")
     code = models.CharField(name="code", max_length=255, unique=True, db_index=True,help_text="Tenant Code")
     active = models.BooleanField (name="active",default=True, verbose_name="Is Active?")
-
+    brand = models.ImageField(verbose_name="Tenant Brand", name="tenant_brand")
     def __str__(self):
         return self.name + " ( " + self.code + " ) "
     
