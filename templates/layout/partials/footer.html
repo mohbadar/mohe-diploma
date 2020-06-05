@@ -1,5 +1,5 @@
       {% load static %}
-
+        {% load i18n %}
 <!-- ==================================== FOOTER ================================= -->
 
         <!-- Footer-->
@@ -8,25 +8,25 @@
               <div class="row">
                   <!-- Footer Location-->
                   <div class="col-lg-4 mb-5 mb-lg-0">
-                      <h4 class="text-uppercase mb-4">آدرس</h4>
-                      <p class="lead mb-0">کارته چهار , کابل افغانستان</p>
+                      <h4 class="text-uppercase mb-4">{% trans "footer_addr_title" %}</h4>
+                      <p class="lead mb-0">{% trans "footer_addr" %}</p>
                   </div>
                   <!-- Footer Social Icons-->
                   <div class="col-lg-4 mb-5 mb-lg-0">
-                      <h4 class="text-uppercase mb-4">شبکه های اجتماعی</h4>
+                      <h4 class="text-uppercase mb-4"> {% trans "footer_socialmedia" %} </h4>
                       <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
                   </div>
                   <!-- Footer About Text-->
                   <div class="col-lg-4">
-                      <h4 class="text-uppercase mb-4">درباره سیستم</h4>
-                      <p class="lead mb-0"> سیستم توسط تیم عصر دیزاین و انکشاف داده شده است. <a href="http://asr.af">ASR</a>.</p>
+                      <h4 class="text-uppercase mb-4"> {% trans "footer_aboutsystem_title" %}</h4>
+                      <p class="lead mb-0">{% trans "footer_aboutsystem" %}</a>.</p>
                   </div>
               </div>
           </div>
       </footer>
       <!-- Copyright Section-->
       <div class="copyright py-4 text-center text-white">
-          <div class="container"><small>حق کاپی نزد عصر محفوظ میباشد.</small></div>
+          <div class="container"><small>{% trans "footer_copyright" %} </small></div>
       </div>
       <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
       <div class="scroll-to-top d-lg-none position-fixed">

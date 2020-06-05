@@ -1,8 +1,9 @@
+        {% load i18n %}
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">درباره ما</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white">{% trans "about_us" %}</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -11,8 +12,12 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto"><p class="lead">ایجاد یک نظام تحصیلات عالی با کیفیت مطابق معیار های جهانی که به نیاز های توسعوی جامعه افغانستان پاسخ داده، با برخورداری از استقلالیت مالی و اکادمیک، کادر های شایسته، لایق، مجهز با تکنالوژی معاصر و متعهد با ارزش های افغانی و اسلامی را تقدیم جامعه نموده، خدمات علمی، اجتماعی، فرهنگی و تحقیقات علمی با کیفیت را ارایه داشته و برای مردم افغانستان و جهان قابل قبول باش</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">ایجاد یک نظام تحصیلات عالی با کیفیت مطابق معیار های جهانی که به نیاز های توسعوی جامعه افغانستان پاسخ داده، با برخورداری از استقلالیت مالی و اکادمیک، کادر های شایسته، لایق، مجهز با تکنالوژی معاصر و متعهد با ارزش های افغانی و اسلامی را تقدیم جامعه نموده، خدمات علمی، اجتماعی، فرهنگی و تحقیقات علمی با کیفیت را ارایه داشته و برای مردم افغانستان و جهان قابل قبول باشد.</p></div>
+                    <div class="col-lg-4 ml-auto"><p class="lead">
+                        {% trans "about_msg1" %}                    
+                    </p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">
+                                            {% trans "about_msg2" %}                    
+                    </p></div>
                 </div>
                 <!-- About Section Button-->
                 <!-- <div class="text-center mt-4">

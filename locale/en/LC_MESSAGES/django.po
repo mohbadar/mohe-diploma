@@ -39,19 +39,78 @@ msgstr ""
 
 
 msgid "ministry_name"
-msgstr "وزارت تحصیلات عالی"
+msgstr "د الکترونیکی خدمات سیستم"
 
 msgid "navbar_menu"
-msgstr "گزینه ها"
+msgstr "مینو"
 
 msgid "navbar_newform"
-msgstr "فورم جدید"
+msgstr " نوی فورم"
 
 msgid "navbar_followform"
-msgstr "تعقیب فورم"
+msgstr " نا بشپره شوی فورم تکمیل"
 
 msgid "navbar_contactus"
-msgstr "تماس با ما" 
+msgstr " مونژ سره اریکه" 
 
 msgid "navbar_about"
-msgstr "درباره با ما"
+msgstr "مونژ په اره"
+
+
+
+msgid "header_welcome"
+msgstr "الکترونیکی سیستم خدمات سیستم ته شه راغلاست"
+
+msgid "header_commitment_msg"
+msgstr "مونژ خپل هیودوالو ته بهترینه خدمات وراندی کولوته متعهد یو. آسانی او کیفیت زمونژ شعار او عمل دی."
+
+msgid "portifolio_online_services_msg"
+msgstr "د آنلاین خدمات"
+
+msgid "about_us"
+msgstr "مونژ په اره "
+
+msgid "about_msg1"
+msgstr "                    ایجاد یک نظام تحصیلات عالی با کیفیت مطابق معیار های جهانی که به نیاز های توسعوی جامعه افغانستان پاسخ داده، با برخورداری از استقلالیت مالی و اکادمیک، کادر های شایسته، لایق، مجهز با تکنالوژی معاصر و متعهد با ارزش های افغانی و اسلامی را تقدیم جامعه نموده، خدمات علمی، اجتماعی، فرهنگی و تحقیقات علمی با کیفیت را ارایه داشته و برای مردم افغانستان و جهان قابل قبول باش"
+
+msgid "about_msg2"
+msgstr "                    ایجاد یک نظام تحصیلات عالی با کیفیت مطابق معیار های جهانی که به نیاز های توسعوی جامعه افغانستان پاسخ داده، با برخورداری از استقلالیت مالی و اکادمیک، کادر های شایسته، لایق، مجهز با تکنالوژی معاصر و متعهد با ارزش های افغانی و اسلامی را تقدیم جامعه نموده، خدمات علمی، اجتماعی، فرهنگی و تحقیقات علمی با کیفیت را ارایه داشته و برای مردم افغانستان و جهان قابل قبول باش"
+
+
+
+msgid "contact_title"
+msgstr "مونژ سره اریکه"
+
+msgid "contact_name"
+msgstr "نوم"
+
+msgid "contact_phone"
+msgstr "شمیره نمبر"
+
+msgid "contact_email"
+msgstr "د الکترونیکی آدرس"
+
+msgid "contact_message"
+msgstr "پیغام"
+
+msgid "btn_send"
+msgstr "واستول"
+
+
+msgid "footer_addr_title"
+msgstr "مونژ آدرس"
+
+msgid "footer_addr"
+msgstr "افغانستان، کابل، کارته چار"
+
+msgid "footer_socialmedia"
+msgstr "په اجتماعی شبکو کی"
+
+msgid "footer_aboutsystem_title"
+msgstr "سیستم په اره"
+
+msgid "footer_aboutsystem"
+msgstr "د سیستم دیزاین او انکشاف په عصر تیم کی شوی دی."
+
+msgid "footer_copyright"
+msgstr "د سیستم تول معنوی او مادی حق عصر تیم سره دی."
