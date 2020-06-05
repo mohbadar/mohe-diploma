@@ -2,5 +2,5 @@ from django.contrib import admin
 
 # Register your models here.
 
-admin.site.site_header = "Afghanistan Electronical Form System (AEFS)"
-admin.site.site_title = "AEFS"
+admin.site.site_header = "eForm System"
+admin.site.site_title = "eForm System"

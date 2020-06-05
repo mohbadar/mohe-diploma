@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'apps.home',
     'apps.tenant',
-    'apps.form'
+    'apps.form',
+    'apps.generic'
 
 ]
 
