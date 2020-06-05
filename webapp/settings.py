@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'apps.home',
+    'apps.organization'
 
 ]
 
@@ -109,11 +111,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'fa'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
   ('fa', _('Farsi')),
-#   ('en', _('English')),
+  ('en', _('English')),
 #   ('ps', _('Pashto')),
 ]
 
