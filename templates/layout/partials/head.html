@@ -1,5 +1,5 @@
       {% load static %}  
-
+      {% load i18n %}
 
     <!-- ================================= HEAD ================================== -->
 
@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>سیستم فورم آنلاین وزارت تحصیلات عالی</title>
+    <title>{% trans "head_general_title" %} {% block title %}
+    {% endblock title %}</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'img/gov.ico' %}" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->

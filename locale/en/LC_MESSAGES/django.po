@@ -19,8 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/home/index.html:6
-#msgid "ministry_name"
-#msgstr "Ministry of Higher Education"
+#msgid "system_brand"
+#msgstr "د الکترونیکی خدمات سیستم"
+
+msgid "head_general_title"
+msgstr "د الکترونیکی خدمات سیستم"
 
 #msgid "navbar_menu"
 #msgstr "Menu"
@@ -38,8 +41,8 @@ msgstr ""
 #msgstr "About Us"
 
 
-msgid "ministry_name"
-msgstr "د الکترونیکی خدمات سیستم"
+msgid "system_brand"
+msgstr "د الکترونیکی فورم خدمات سیستم"
 
 msgid "navbar_menu"
 msgstr "مینو"

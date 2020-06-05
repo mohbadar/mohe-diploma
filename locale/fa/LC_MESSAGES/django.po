@@ -19,8 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/home/index.html:6
-msgid "ministry_name"
-msgstr "وزارت تحصیلات عالی"
+msgid "system_brand"
+msgstr "سیستم خدمات فورم الکترونیکی"
+
+msgid "head_general_title"
+msgstr "سیستم خدمات الکترونیکی"
 
 msgid "navbar_menu"
 msgstr "گزینه ها"
