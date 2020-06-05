@@ -9,12 +9,14 @@
     <body id="page-top" dir="rtl">
 
             {% include 'layout/partials/navbar.html'%}
-            {% include 'layout/partials/header.html'%}
 
-            {% include 'layout/partials/portfolio.html'%}
-            {% include 'layout/partials/about.html'%}
+            {% block header %} {%endblock%}
 
-            {% include 'layout/partials/contact.html'%}
+            {% block portfolio %} {%endblock%}
+
+             {% block about %} {%endblock%}
+
+            {% block contact %} {%endblock%}
 
             {% block content %}{% endblock %}
 
