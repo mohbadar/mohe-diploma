@@ -10277,3 +10277,11 @@ form .row:first-child .floating-label-form-group {
 .formcode {
   font-size: 2rem
 }
+
+.justify {
+ text-align: justify;
+}
+
+.bold {
+  font-weight: bold;
+}
