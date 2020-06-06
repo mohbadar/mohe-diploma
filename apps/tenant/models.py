@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import JSONField
+
 # Create your models here.
 
 class Tenant(models.Model):
@@ -17,7 +18,7 @@ class Tenant(models.Model):
 class Template(models.Model):
     name = models.CharField(name="name", max_length=255, unique=True, db_index=True,verbose_name="Template Name")
     tenant = models.ForeignKey(to=Tenant, on_delete="cascade")
-    template = JSONField()
+    template =  models.TextField(name="template", max_length=2500, unique=True, db_index=True,help_text="JSON")
     active = models.BooleanField(name="active", verbose_name="Is Active", default=True)
 
     def __str__(self):

@@ -1,0 +1,25 @@
+{
+    "steps":[
+         {"name":"Open", "transitions":[
+                 {"name":"Reject", "toStep":"Rejected", "CommentRequired": true},
+                 {"name":"Close","toStep":"Closed","resolutions":["Completed", "Incomplete", "Duplicate"], "CommentRequired": true}
+         ],
+         "requiredAuthorities": ["ADMIN_ROLE"],
+         },
+         {"name":"Reopened", "transitions":[
+                 {"name":"Reject", "toStep":"Rejected", "CommentRequired": true},
+                 {"name":"Close", "toStep":"Closed", "resolutions":["Completed", "Incomplete", "Duplicate"], "CommentRequired": true}
+         ],
+         "requiredAuthorities": [ "ADMIN_ROLE"],
+         },
+         {"name":"Rejected", "transitions":[
+                 {"name":"Reopen", "toStep":"Reopened", "CommentRequired": false},
+                 {"name":"Close", "toStep":"Closed", "resolutions":["Completed", "Incomplete", "Duplicate"], "CommentRequired": true}
+         ],
+         "requiredAuthorities": ["ADMIN_ROLE"],
+         },
+         {"name":"Closed", "transitions":[ ],
+         "requiredAuthorities": ["ADMIN_ROLE"],
+         }
+     ]
+ }
