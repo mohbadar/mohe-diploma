@@ -28,6 +28,7 @@ from django.views.i18n import set_language
 urlpatterns = [
     # path('site-admin/', include('djadmin.urls')),
     path('', include('apps.home.urls')),
+    path('generic.py/', include('apps.generic.urls')),
     # path('products/', include('apps.product.urls')),
     # path('services/', include('apps.service.urls')),
     # path('posts/', include('apps.post.urls')),
