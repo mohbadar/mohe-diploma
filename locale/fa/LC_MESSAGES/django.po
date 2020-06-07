@@ -40,6 +40,8 @@ msgstr "تماس با ما"
 msgid "navbar_about"
 msgstr "درباره با ما"
 
+msgid "navbar_printform"
+msgstr "پرنت فورم"
 
 msgid "header_welcome"
 msgstr "به سیستم خدمات فورم الکترونیکی خوش آمدید."

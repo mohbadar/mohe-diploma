@@ -14,7 +14,7 @@ class Form(models.Model):
     structure =  models.TextField(name="structure", max_length=2500, unique=True, db_index=True,help_text="JSON")
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     slug = models.SlugField(max_length = 250, null = True, blank = True, editable=False) 
-    tenant = models.ForeignKey(to= Tenant, on_delete= "cascade",to_field="id" )
+    tenant = models.ForeignKey(to= Tenant, on_delete= models.CASCADE,to_field="id" )
     
     
     def save(self, *args, **kwargs):
@@ -28,11 +28,11 @@ class Form(models.Model):
         ordering = ['-created_at']
 
 class Instance (models.Model):
-    form = models.ForeignKey(to = Form, on_delete="cascade", parent_link=True, related_name="form_instance_relationship", to_field="id")
+    form = models.ForeignKey(to = Form, on_delete=models.CASCADE, parent_link=True, related_name="form_instance_relationship", to_field="id")
     name = models.CharField(name="name", max_length=255, unique=True, db_index=True,help_text="Instance Name")
     data = models.TextField(name="data", max_length=2500, unique=True, db_index=True,help_text="Data")
     workflow_status = models.CharField(name="workflow_status", max_length=255, unique=True, db_index=True,help_text="Workflow Status")
-    tenant = models.ForeignKey(to= Tenant, on_delete= "cascade",to_field="id" )
+    tenant = models.ForeignKey(to= Tenant, on_delete= models.CASCADE,to_field="id" )
 
     def __str__(self):
         return self.tenant.name + " - " + self.form.name + " - "+ self.name + " - "+ self.workflow_status

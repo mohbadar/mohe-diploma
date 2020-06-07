@@ -59,6 +59,9 @@ msgstr " مونژ سره اریکه"
 msgid "navbar_about"
 msgstr "مونژ په اره"
 
+msgid "navbar_printform"
+msgstr "پرنت فورم"
+
 
 
 msgid "header_welcome"

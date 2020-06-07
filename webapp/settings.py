@@ -90,16 +90,7 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'eformdb',
-#         'USER': 'eform_user',
-#         'PASSWORD': 'secret',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
+
 
 
 # Password validation
