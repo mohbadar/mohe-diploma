@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'apps.home',
     'apps.tenant',
     'apps.form',
-    'apps.generic'
+    'apps.generic',
+    'apps.appointment'
 
 ]
 
