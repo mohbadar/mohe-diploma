@@ -14,6 +14,15 @@ class Tenant(models.Model):
         return self.name + " ( " + self.code + " ) "
     
 
+class Center(models.Model):
+    name = models.CharField(name="name", max_length=255, unique=True, db_index=True,help_text="Center Name")
+    code = models.CharField(name="code", max_length=255, unique=True, db_index=True,help_text="Center Code")
+    location = models.CharField(name="location", max_length=255, verbose_name="Location")
+    active = models.BooleanField (name="active",default=True, verbose_name="Is Active?")
+    tenant = models.ForeignKey( to= Tenant, on_delete=models.CASCADE, default=1,to_field="id")
+    def __str__(self):
+        return self.tenant.name + " - " +self.name + " ( " + self.code + " ) "
+    
 
 class Template(models.Model):
     name = models.CharField(name="name", max_length=255, unique=True, db_index=True,verbose_name="Template Name")
