@@ -1,5 +1,5 @@
 from django.db import models
-from ..tenant.models import Tenant
+from ..tenant.models import Tenant, Center
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.utils.text import slugify
@@ -15,6 +15,7 @@ class Form(models.Model):
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     slug = models.SlugField(max_length = 250, null = True, blank = True, editable=False) 
     tenant = models.ForeignKey(to= Tenant, on_delete= models.CASCADE,to_field="id" )
+    center = models.ForeignKey(to=Center, on_delete=models.CASCADE, default=1,to_field="id")
     
     
     def save(self, *args, **kwargs):
@@ -33,6 +34,7 @@ class Instance (models.Model):
     data = models.TextField(name="data", max_length=2500, unique=True, db_index=True,help_text="Data")
     workflow_status = models.CharField(name="workflow_status", max_length=255, unique=True, db_index=True,help_text="Workflow Status")
     tenant = models.ForeignKey(to= Tenant, on_delete= models.CASCADE,to_field="id" )
+    center = models.ForeignKey(to=Center, on_delete=models.CASCADE, default=1,to_field="id")
 
     def __str__(self):
         return self.tenant.name + " - " + self.form.name + " - "+ self.name + " - "+ self.workflow_status
