@@ -3,3 +3,4 @@ django-ckeditor
 pillow
 django-grappelli
 django-languages-plus
+jdatetime

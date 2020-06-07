@@ -1,5 +1,6 @@
 
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 
 
 
@@ -15,35 +16,13 @@
               <!--  <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">{% trans "navbar_about" %}</a></li>
 -->
                 <li class="nav-item mx-0 mx-lg-1 ">
-
-                    
-                    <form id="langchangeform" action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                        <input name="next" type="hidden" value="{{ redirect_to }}">
-                        <select id="langchange" name="language" class="form-group floating-label-form-group controls mb-0 pb-2">
-
-                            {% get_current_language as LANGUAGE_CODE %}
-                            {% get_available_languages as LANGUAGES %}
-                            {% get_language_info_list for LANGUAGES as languages %}
-                            {% for language in languages %}
-                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                                   
-                                   {% if language.code == "en"%}
-                                    پشتو 
-                                   {% elif language.code == "fa"%}
-                                    دری
-
-                                    {% elif language.code == "en"%}
-                                    English
-
-                                   {%endif%}
-                                   
-                                </option>
-                            {% endfor %}
-                        </select>
-                        <input type="submit" value="{% trans "btn_send" %}">
-                    </form>
-                    
-
+                    <div class="btn-group">
+                            <button id="langchange">  
+                              {% if LANGUAGE_CODE == "en"%} دری {% else %} پشتو{%endif%}
+                            </button>
+                    </div>
+                 
+                      
                 </li> 
             </ul>
         </div>

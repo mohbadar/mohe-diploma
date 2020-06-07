@@ -1,6 +1,9 @@
             {% load static %}
+            {% load i18n %}
 
-
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
 <!-- ============================ SCRIPT ====================================== -->
 
         <!-- Bootstrap core JS-->
@@ -15,9 +18,21 @@
         <script src="{% static 'js/scripts.js' %}"></script>
 
         <script>
-          $("#langchange").on("change", function()
+          $("#langchange").on("click", function()
           {
-                  $("#langchangeform").submit();
+                  $.ajax({
+                           type: "POST",
+                           url: "{% url 'set_language' %}",
+                           data: {'language': '{% if LANGUAGE_CODE == "en"%}fa{% else %}en{%endif%}', 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+                           success: function(response) {
+                                location.reload();
+                            },
+                            error: function(rs, e) {
+                                   alert(e);
+                            }
+                      });
           });
-        </scrip>
+        </script>
+
+
 <!-- ============================ END SCRIPT ====================================== -->
