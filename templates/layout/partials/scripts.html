@@ -7,15 +7,52 @@
 <!-- ============================ SCRIPT ====================================== -->
 
         <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script> -->
         <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
         <!-- Contact form JS-->
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/jquery.easing.min.js' %}"></script>
         <script src="{% static 'mail/jqBootstrapValidation.js' %}"></script>
         <script src="{% static 'mail/contact_me.js' %}"></script>
         <!-- Core theme JS-->
         <script src="{% static 'js/scripts.js' %}"></script>
+
+        <script src="{% static 'js/underscore.js' %}"></script>
+
+        <script src="{% static 'js/jsv.js' %}"></script>
+        <script src="{% static 'js/jsonform.js' %}"></script>
+        <script type="text/javascript">
+                var json_schema = {
+                    name: {
+                      type: 'string',
+                      title: 'نام',
+                      required: true
+                    },
+                    age: {
+                      type: 'number',
+                      title: 'عمر',
+                      placeholder: 'Age'
+                    }
+                  }
+                  
+                $('#form1').jsonForm({
+                  schema: json_schema,
+                  onSubmit: function (errors, values) {
+                    if (errors) {
+                      $('#res').html('<p>I beg your pardon?</p>');
+                    }
+                    else {
+                      $('#res').html('<p>Hello ' + values.name + '.' +
+                        (values.age ? '<br/>You are ' + values.age + '.' : '') +
+                        '</p>');
+                    }
+                  }
+                });
+              </script>
+
 
         <script>
           $("#langchange").on("click", function()
