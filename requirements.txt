@@ -4,3 +4,4 @@ pillow
 django-grappelli
 django-languages-plus
 jdatetime
+django-bulk-admin

@@ -41,7 +41,20 @@ class Department(models.Model):
         return self.university.name +" - "+ self.faculty.name +" - "+ self.name + " - " + self.code
 
 
+class Cycle(models.Model):
+    name = models.CharField(name="name",verbose_name="Name", unique=True, db_index=True,max_length=255 )
+    code = models.CharField(name="code",verbose_name="code", unique=True, db_index=True,max_length=255 )
+    date = models.DateField(name="date", auto_now=False, auto_now_add=False)
+    def __str__(self):
+        return self.name + " - " + self.code
 
+
+class Diploma(models.Model):
+    number = models.CharField(name="number",verbose_name="Number", unique=True, db_index=True,max_length=255 )
+    university = models.ForeignKey(to=University, on_delete=models.CASCADE, blank=True, null=True, default=1)
+
+    def __str__(self):
+        return self.university.name +" - "+ self.faculty.name +" - "+ self.name + " - " + self.code
 
 
 class UserFacultyRelation(models.Model):
