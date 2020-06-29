@@ -1,10 +1,10 @@
-#### eForm Application
+#### eForm Application for Ministry of Higher Education
 
 Installation Guide:
 
-git clone https://github.com/mohbadar/mohe-application.git
+git clone https://github.com/mohbadar/mohe-eform.git
 
-cd dfi-website
+cd mohe-eform
 
 pip install -r requirements.txt
 python manage.py runserver

@@ -56,3 +56,35 @@ class Instance(models.Model):
     def __str__(self):
         return self.tenant.name + " - " + self.form.name + " - "+ self.name + " - "+ self.workflow_status + " - "+ self.instance_no
 
+
+
+UNIVERSITIES = (
+    ("Kabul University", "KU"),
+    ("Herat University", "HU")
+)
+
+
+class Degree(models.Model):
+    firstname = models.CharField(name="firstname", max_length=255, unique=True, db_index=True,help_text="First Name")
+    lastname = models.CharField(name="lastname", max_length=255, unique=True, db_index=True,help_text="Last Name")
+    dob = models.DateField(name="dob", max_length=255, unique=True, db_index=True,help_text="Date of Birth")
+    department = models.CharField(name="department", max_length=255, unique=True, db_index=True,help_text="Department")
+    faculty = models.CharField(name="faculty", max_length=255, unique=True, db_index=True,help_text="Faculty")
+    university = models.CharField(name="university", max_length=255, unique=True, db_index=True,help_text="University")
+    graduation_year = models.IntegerField(name="graduation_year", unique=True, db_index=True,help_text="Graduation Year")
+    slug = models.SlugField(max_length = 250, null = True, blank = True, editable=False)
+    created_at = models.DateTimeField(default=timezone.now, editable=False)
+    student_image = models.ImageField(name="student_image", null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.firstname)
+        super(Degree, self).save(*args, **kwargs) # Call the real save() method
+
+    def __str__(self):
+        return self.firstname + " - "  + self.lastname +  " - "+ self.university + " - "+ self.faculty + " - "+ self.department 
+    class Meta:
+        ordering = ['-created_at']
+        permissions = (
+            ("can_register_certificate", "Can Register a New Certificate"),
+            ("can_view_ownfaculty_certificates", "Can View Own Faculty Certificate")
+        )

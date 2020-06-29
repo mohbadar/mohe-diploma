@@ -20,10 +20,10 @@ msgstr ""
 
 #: templates/home/index.html:6
 msgid "system_brand"
-msgstr "سیستم خدمات فورم الکترونیکی"
+msgstr "وزارت تحصیلات عالی"
 
 msgid "head_general_title"
-msgstr "سیستم خدمات الکترونیکی"
+msgstr "وزارت تحصیلات عالی"
 
 msgid "navbar_menu"
 msgstr "گزینه ها"
@@ -44,7 +44,7 @@ msgid "navbar_printform"
 msgstr "پرنت فورم"
 
 msgid "header_welcome"
-msgstr "به سیستم خدمات فورم الکترونیکی خوش آمدید."
+msgstr "به سیستم وزارت تحصیلات عالی خوش آمدید."
 
 msgid "header_commitment_msg"
 msgstr "ما به ارایه بهترین خدمات آنلاین به هموطنان خویش متعهد هستیم. آسانی و کیفیت شعار و عمل ماست."

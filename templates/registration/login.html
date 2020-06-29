@@ -1,0 +1,12 @@
+{% extends "layout/master.html" %}
+
+
+
+{% if perms.user.can_mark_returned %}
+    <!-- We can mark a BookInstance as returned. -->
+    <!-- Perhaps add code to link to a "book return" view here. -->
+{% endif %}
+
+{% block content %}
+            {% include 'components/loginform.html'%}
+{% endblock%}

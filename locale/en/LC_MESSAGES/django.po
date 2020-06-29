@@ -20,10 +20,10 @@ msgstr ""
 
 #: templates/home/index.html:6
 #msgid "system_brand"
-#msgstr "د الکترونیکی خدمات سیستم"
+#msgstr "لوړو زده کړو وزارت"
 
 msgid "head_general_title"
-msgstr "د الکترونیکی خدمات سیستم"
+msgstr "لوړو زده کړو وزارت"
 
 #msgid "navbar_menu"
 #msgstr "Menu"
@@ -42,7 +42,7 @@ msgstr "د الکترونیکی خدمات سیستم"
 
 
 msgid "system_brand"
-msgstr "د الکترونیکی فورم خدمات سیستم"
+msgstr "لوړو زده کړو وزارت"
 
 msgid "navbar_menu"
 msgstr "مینو"
@@ -65,7 +65,7 @@ msgstr "پرنت فورم"
 
 
 msgid "header_welcome"
-msgstr "دالکترونیکی  فورم سیستم خدمات سیستم ته شه راغلاست"
+msgstr "دلوړو زده کړو وزارت سیستم خدمات سیستم ته شه راغلاست"
 
 msgid "header_commitment_msg"
 msgstr "مونژ خپل هیودوالو ته بهترینه خدمات وراندی کولوته متعهد یو. آسانی او کیفیت زمونژ شعار او عمل دی."
