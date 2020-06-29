@@ -22,14 +22,19 @@
                         <p>Your username and password didn't match. Please try again.</p>
                   {% endif %}
 
-                    {% if next %}
+                
+
+                
                         {% if user.is_authenticated %}
                         <p>Your account doesn't have access to this page. To proceed,
                         please login with an account that has access.</p>
+
+                        <p><a href="{% url 'get_home' %}" style="float:right" >Return to Home</a></p>
+
+
                         {% else %}
-                        <p>Please login to see this page.</p>
-                        {% endif %}
-                    {% endif %}
+                       
+
 
                     <form  method="post" action="{% url 'login' %}" novalidate="novalidate">
 
@@ -54,9 +59,12 @@
                         <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">{% trans "btn_send" %}</button></div>
                         <input type="hidden" name="next" value="{{ next }}" />
                     </form>
+
+                    <p><a href="{% url 'password_reset' %}" style="float:right" >?فراموش رمز عبور</a></p>
+
+                    {% endif %}
                 </div>
             </div>
-            <p><a href="{% url 'password_reset' %}" style="float:right" >?فراموش رمز عبور</a></p>
         </div>
     </section>
 

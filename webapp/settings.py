@@ -41,10 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'apps.home',
-    'apps.tenant',
-    'apps.form',
     'apps.generic',
-    'apps.appointment',
     
 
 ]

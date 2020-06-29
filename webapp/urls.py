@@ -24,6 +24,10 @@ from django.views.static import serve
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.i18n import set_language
+from django.contrib.auth.decorators import user_passes_test
+
+
+login_forbidden =  user_passes_test(lambda u: u.is_anonymous(), '/')
 
 urlpatterns = [
     # path('site-admin/', include('djadmin.urls')),
