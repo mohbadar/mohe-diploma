@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'pyforms_web.web.middleware.PyFormsMiddleware'
 ]
 
 ROOT_URLCONF = 'webapp.urls'
@@ -181,3 +182,7 @@ CKEDITOR_CONFIGS = {
     },
 }
 ###################################
+
+
+SETTINGS_PRIORITY = 0 # Will define this settings file as priority. Will override all the settings with lower priority.
+PYFORMS_MODE = 'WEB' # Will configure pyforms to run as WEB mode.
