@@ -9,6 +9,7 @@ from ..generic.models import Certificate, UserFacultyRelation
 @login_required
 # @permission_required('*.*')
 def get_home(request):
+    print("Profile", request.user)
     userFacultyRelation = UserFacultyRelation.objects.get(user = request.user.id)
     certificates = Certificate.objects.filter(faculty=userFacultyRelation.faculty.id)
     return render(request, "home/index.html", {"certificates": certificates})
