@@ -10,6 +10,12 @@ GENDER = (
     ("MALE", "MALE"),
     ("FEMALE", "FEMALE")
 )
+
+DEGREE = (
+    ("BACHELOR", "BACHELOR"),
+    ("MASTER", "MASTER"),
+    ("PHD", "PHD")
+)
 class Contact(models.Model):
     name = models.CharField(name="name",verbose_name="Name", unique=True, db_index=True,max_length=255 )
     email = models.EmailField(name="email", max_length=255, unique=True, db_index=True,verbose_name="Email")
@@ -65,23 +71,23 @@ class Certificate(models.Model):
     lastname = models.CharField(name="lastname", max_length=255,help_text="Last Name")
     fathername =  models.CharField(name="fathername", max_length=255,help_text="Father Name")
     birth_year = models.IntegerField(name="birth_year",help_text="Birth Year")
-    university = models.ForeignKey(University, related_name ="certificate_university", verbose_name="University", on_delete=models.CASCADE)
-    faculty = models.ForeignKey(Faculty, related_name ="certificate_faculty", verbose_name="Faculty", on_delete=models.CASCADE)
+    user = models.ForeignKey(User, editable=False, null=True, blank=True, related_name ="certificate_user", verbose_name="User", on_delete=models.CASCADE)
     department = models.ForeignKey(Department, related_name ="certificate_department", verbose_name="Department", on_delete=models.CASCADE)
-    graduation_year = models.IntegerField(name="graduation_year", unique=True, db_index=True,help_text="Graduation Year")
+    graduation_year = models.IntegerField(name="graduation_year",help_text="Graduation Year")
     slug = models.SlugField(max_length = 250, null = True, blank = True, editable=False)
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     qrtext  = models.TextField(name="qrtext", editable=False,help_text="QR Code")
-    degree_title= models.CharField(name="degree_title",help_text="Degree Title", max_length=255)
+    degree_title= models.CharField(name="degree_title", choices=DEGREE ,help_text="Degree Title", max_length=255)
     gender = models.CharField(choices= GENDER,max_length=6, default="MALE")
     picture = models.ImageField(name="picture", null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.firstname)
+        self.qrtext = "{firstname}:{lastname}:{fathername}:{birth_year}:{university}:{faculty}:{department}:{graduation_year}:{degree_title}".format(firstname=self.firstname, lastname=self.lastname, fathername=self.fathername, birth_year=self.birth_year, university=self.department.university.code, faculty=self.department.faculty.code, department=self.department.code, graduation_year=self.graduation_year, degree_title=self.degree_title)
+        self.slug = slugify(self.qrtext)
         super(Certificate, self).save(*args, **kwargs) # Call the real save() method
 
     def __str__(self):
-        return  "{university}-{faculty}-{department}-{firstname}-{lastname}-{graduation_year}".format(university = self.university.code ,faculty = self.faculty.code,department = self.department.code, firstname = self.firstname,lastname = self.lastname, graduation_year = self.graduation_year)
+        return  "{university}-{faculty}-{department}-{firstname}-{lastname}-{graduation_year}".format(university = self.department.university.code ,faculty = self.department.faculty.code,department = self.department.code, firstname = self.firstname,lastname = self.lastname, graduation_year = self.graduation_year)
 
     class Meta:
         ordering = ['-created_at']
