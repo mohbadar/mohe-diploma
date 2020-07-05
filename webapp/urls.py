@@ -31,9 +31,9 @@ login_forbidden =  user_passes_test(lambda u: u.is_anonymous(), '/')
 
 urlpatterns = [
     # path('site-admin/', include('djadmin.urls')),
-    path('', include('apps.home.urls')),
+    # path('', include('apps.home.urls')),
     path('generic.py/', include('apps.generic.urls')),
-    path('admin/',  admin.site.urls),
+    path('',  admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
     path('accounts/', include('django.contrib.auth.urls')), 
 
