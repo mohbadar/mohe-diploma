@@ -146,7 +146,7 @@ class CertificateAdmin(admin.ModelAdmin):
 
 
 class BlankDiplomaAdmin(admin.ModelAdmin):
-    search_fields = ('name', 'code')
+    search_fields = ('barcode',)
     def save_model(self, request, obj, form, change):
         obj.user = request.user
         obj.save()

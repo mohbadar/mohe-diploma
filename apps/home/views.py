@@ -12,6 +12,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import permission_required
 from ..generic.models import Certificate, UserFacultyRelation
 
+from ..generic import jasper
+
 
 class BarcodeDrawing(Drawing):
     def __init__(self, text_value, *args, **kw):
@@ -26,10 +28,14 @@ def barcode(request):
     binaryStuff = d.asString('gif')
     return HttpResponse(binaryStuff, 'image/gif')
 
-@login_required
+# @login_required
 # @permission_required('*.*')
 def get_home(request):
+    jasper.compiling()
+    jasper.processing()
+    jasper.listing_parameters()
     print("Profile", request.user)
+
     # item = UserFacultyRelation.objects.get(user = request.user.id).last()
     # certificates = Certificate.objects.filter(faculty=item.faculty.id)
     certificates = {}

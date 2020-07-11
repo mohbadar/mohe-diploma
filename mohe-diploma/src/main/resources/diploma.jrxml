@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="diploma" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="032af513-833e-4f8e-ba8e-96e21d90cb43">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="firstname" class="java.lang.String"/>
+	<parameter name="lastname" class="java.lang.String"/>
+	<parameter name="fathername" class="java.lang.String"/>
+	<parameter name="dob" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="57" width="240" height="30" uuid="b73dc291-4d9d-45d0-a81d-f5fc658fa9f3"/>
+				<textFieldExpression><![CDATA[$P{firstname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="54" width="280" height="30" uuid="911aa76f-51f3-4212-8f01-9244b7f39ced"/>
+				<textFieldExpression><![CDATA[$P{lastname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="5" width="240" height="30" uuid="84c55696-e63d-4db3-9041-487e8a4908ae"/>
+				<textFieldExpression><![CDATA[$P{fathername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="5" width="280" height="30" uuid="6caa924c-dfbc-431c-a8e7-7dc26f454550"/>
+				<textFieldExpression><![CDATA[$P{dob}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -90,7 +90,7 @@ class Certificate(models.Model):
 class BlankDiploma(models.Model):
     barcode = models.CharField(name="barcode", max_length=255, unique=True, db_index=True,help_text="Barcode")
     status = models.BooleanField(name="status", default=False)
-    university = models.ForeignKey(University, related_name ="blank_diploma_university", verbose_name="University", on_delete=models.CASCADE)
+    university = models.ForeignKey(University, editable=False, related_name ="blank_diploma_university", verbose_name="University", on_delete=models.CASCADE)
     user = models.ForeignKey(User, editable=False, null=True, blank=True, related_name ="blank_diploma_user", verbose_name="User", on_delete=models.CASCADE)
     certificate = models.ForeignKey(Certificate, null=True, blank=True, related_name ="blank_diploma_certificate", verbose_name="Certificate", on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=timezone.now, editable=False)
